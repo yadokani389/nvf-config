@@ -39,20 +39,27 @@
       perSystem =
         {
           pkgs,
+          config,
           ...
         }:
         let
-          config = import ./config;
+          config' = import ./config;
           nvim =
             (nvf.lib.neovimConfiguration {
               inherit pkgs;
               modules = [
-                config
+                config'
               ];
             }).neovim;
         in
         {
           packages.default = nvim;
+
+          devShells.default = pkgs.mkShell {
+            inputsFrom = [
+              config.pre-commit.devShell
+            ];
+          };
 
           treefmt = {
             projectRootFile = "flake.nix";

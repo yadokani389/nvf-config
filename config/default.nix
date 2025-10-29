@@ -97,7 +97,10 @@
       enableExtraDiagnostics = true;
       enableDAP = true;
 
-      nix.enable = true;
+      nix = {
+        enable = true;
+        format.type = "nixfmt";
+      };
       markdown = {
         enable = true;
         extensions = {

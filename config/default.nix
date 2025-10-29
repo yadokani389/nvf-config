@@ -10,7 +10,6 @@
 
   vim = {
     enableLuaLoader = true;
-    syntaxHighlighting = true;
     lineNumberMode = "relNumber";
     preventJunkFiles = true;
     undoFile.enable = true;
@@ -122,9 +121,6 @@
         };
       };
       rust.enable = true;
-      haskell.enable = false;
-      tailwind.enable = false;
-      svelte.enable = false;
     };
 
     terminal = {
@@ -145,8 +141,6 @@
         panel.enabled = false;
       };
     };
-
-    extraPackages = with pkgs; [ rust-analyzer ];
 
     extraPlugins = {
       auto-save = {

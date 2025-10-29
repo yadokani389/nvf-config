@@ -4,6 +4,7 @@
     ./barbar.nix
     ./keymaps.nix
     ./lsp-endhints.nix
+    ./tiny-code-action.nix
     ./vim-eft.nix
     ./vim-translator.nix
   ];

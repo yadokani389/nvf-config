@@ -58,6 +58,7 @@
         toggleSelectedBlock = "<Leader>/";
       };
     };
+    git.gitsigns.enable = true;
 
     telescope = {
       enable = true;

@@ -31,6 +31,29 @@
         mode = "n";
         action = "<nop>";
       }
+      {
+        key = "p";
+        mode = "v";
+        action = "P";
+      }
+      {
+        key = "d";
+        mode = [
+          "n"
+          "v"
+        ];
+        action = ''"_d'';
+        noremap = true;
+      }
+      {
+        key = "c";
+        mode = [
+          "n"
+          "v"
+        ];
+        action = ''"_c'';
+        noremap = true;
+      }
 
       {
         # Escape terminal mode using ESC

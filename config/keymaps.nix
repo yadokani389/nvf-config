@@ -93,13 +93,13 @@
       {
         key = "<leader>lj";
         mode = "n";
-        action = "<cmd>lua vim.diagnostic.goto_prev()<CR>";
+        action = "<cmd>lua vim.diagnostic.goto_next()<CR>";
         desc = "Lsp diagnostic goto_next";
       }
       {
         key = "<leader>lk";
         mode = "n";
-        action = "<cmd>lua vim.diagnostic.goto_next()<CR>";
+        action = "<cmd>lua vim.diagnostic.goto_prev()<CR>";
         desc = "Lsp diagnostic goto_prev";
       }
     ];

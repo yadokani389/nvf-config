@@ -2,10 +2,11 @@
 {
   vim = {
     extraPackages = [ pkgs.python3 ];
-    extraPlugins = {
+    lazy.plugins = {
       vim-translator = {
         package = pkgs.vimUtils.buildVimPlugin {
           name = "vim-translator";
+          pname = "vim-translator";
           src = pkgs.fetchFromGitHub {
             owner = "voldikss";
             repo = "vim-translator";
@@ -13,7 +14,7 @@
             hash = "sha256-ow5axYMtH433hXwYF5Oz3wWT/24VUHpALrH+Phlwk90=";
           };
         };
-        setup = ''
+        after = ''
           vim.g.translator_target_lang = "ja"
           vim.g.translator_default_engines = { "google" }
           vim.g.translator_window_type = "popup"

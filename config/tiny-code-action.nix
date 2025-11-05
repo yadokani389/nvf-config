@@ -1,9 +1,10 @@
 { pkgs, ... }:
 {
   vim = {
-    extraPlugins.tiny-code-action-nvim = {
+    lazy.plugins."tiny-code-action-nvim" = {
       package = pkgs.vimUtils.buildVimPlugin {
         name = "tiny-code-action-nvim";
+        pname = "tiny-code-action-nvim";
         src = pkgs.fetchFromGitHub {
           owner = "rachartier";
           repo = "tiny-code-action.nvim";

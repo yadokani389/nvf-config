@@ -142,25 +142,22 @@
       };
     };
 
-    extraPlugins = {
-      auto-save = {
+    lazy.plugins = {
+      "auto-save.nvim" = {
         package = pkgs.vimPlugins.auto-save-nvim;
-        setup = "require('auto-save').setup{}";
+        setupModule = "auto-save";
       };
-      dropbar-nvim = {
+      "dropbar.nvim" = {
         package = pkgs.vimPlugins.dropbar-nvim;
-        setup = "require('dropbar').setup()";
       };
-      mkdir-nvim = {
+      "mkdir.nvim" = {
         package = pkgs.vimPlugins.mkdir-nvim;
       };
-      wilder = {
+      "wilder.nvim" = {
         package = pkgs.vimPlugins.wilder-nvim;
-        setup = "require('wilder').setup({modes = {':', '/', '?'}})";
       };
-      copilotChat = {
+      "CopilotChat.nvim" = {
         package = pkgs.vimPlugins.CopilotChat-nvim;
-        setup = "require('CopilotChat').setup{}";
       };
     };
   };

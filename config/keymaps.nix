@@ -2,11 +2,6 @@
   vim = {
     keymaps = [
       {
-        key = ";";
-        mode = "";
-        action = ":";
-      }
-      {
         key = "<S-l>";
         mode = "";
         action = "10l";

@@ -1,10 +1,9 @@
 { pkgs, ... }:
 {
   vim = {
-    extraPlugins = {
-      barbar = {
+    lazy.plugins = {
+      "barbar.nvim" = {
         package = pkgs.vimPlugins.barbar-nvim;
-        setup = "require('barbar').setup{}";
       };
     };
 

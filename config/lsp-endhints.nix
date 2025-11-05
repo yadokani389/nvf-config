@@ -1,8 +1,9 @@
 { pkgs, ... }:
 {
-  vim.extraPlugins.lsp-endhints = {
+  vim.lazy.plugins.lsp-endhints = {
     package = pkgs.vimUtils.buildVimPlugin {
       name = "lsp-endhints";
+      pname = "lsp-endhints";
       src = pkgs.fetchFromGitHub {
         owner = "chrisgrieser";
         repo = "nvim-lsp-endhints";
@@ -10,6 +11,6 @@
         hash = "sha256-MgvZqaYbJWmcjIYJM0hCfnIVc+uKE0vk3Ky6PWFYpys=";
       };
     };
-    setup = "require('lsp-endhints').enable()";
+    after = "require('lsp-endhints').enable()";
   };
 }

@@ -4,6 +4,7 @@
     ./barbar.nix
     ./blink.nix
     ./keymaps.nix
+    ./lazygit.nix
     ./lsp-endhints.nix
     ./tiny-code-action.nix
     ./vim-eft.nix
@@ -126,7 +127,6 @@
     terminal = {
       toggleterm = {
         enable = true;
-        lazygit.enable = true;
         setupOpts = {
           open_mapping = "<C-t>";
         };

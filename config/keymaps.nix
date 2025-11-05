@@ -73,13 +73,6 @@
       }
 
       {
-        key = "<leader>g";
-        mode = "";
-        action = "";
-        desc = "Git";
-      }
-
-      {
         key = "<leader>l";
         mode = "";
         action = "";

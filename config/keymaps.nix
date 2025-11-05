@@ -49,6 +49,24 @@
         action = ''"_c'';
         noremap = true;
       }
+      {
+        key = "D";
+        mode = [
+          "n"
+          "v"
+        ];
+        action = "d";
+        noremap = true;
+      }
+      {
+        key = "C";
+        mode = [
+          "n"
+          "v"
+        ];
+        action = "c";
+        noremap = true;
+      }
 
       {
         # Escape terminal mode using ESC

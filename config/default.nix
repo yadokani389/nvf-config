@@ -2,6 +2,7 @@
 {
   imports = [
     ./barbar.nix
+    ./blink.nix
     ./keymaps.nix
     ./lsp-endhints.nix
     ./tiny-code-action.nix
@@ -43,7 +44,6 @@
       preview.markdownPreview.enable = true;
     };
     binds.whichKey.enable = true;
-    autocomplete.nvim-cmp.enable = true;
     snippets.luasnip.enable = true;
     ui.noice = {
       enable = true;

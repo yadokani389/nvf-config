@@ -12,34 +12,33 @@
           hash = "sha256-Gi9onX/pSIxjtOsXgYUxJtvY6boKcicAkchIwP6K12Q=";
         };
       };
+      keys = [
+        {
+          key = ";";
+          mode = "";
+          action = "<Plug>(eft-repeat)";
+        }
+        {
+          key = "f";
+          mode = "";
+          action = "<Plug>(eft-f)";
+        }
+        {
+          key = "F";
+          mode = "";
+          action = "<Plug>(eft-F)";
+        }
+        {
+          key = "t";
+          mode = "";
+          action = "<Plug>(eft-t)";
+        }
+        {
+          key = "T";
+          mode = "";
+          action = "<Plug>(eft-T)";
+        }
+      ];
     };
-
-    keymaps = [
-      {
-        key = ";";
-        mode = "";
-        action = "<Plug>(eft-repeat)";
-      }
-      {
-        key = "f";
-        mode = "";
-        action = "<Plug>(eft-f)";
-      }
-      {
-        key = "F";
-        mode = "";
-        action = "<Plug>(eft-F)";
-      }
-      {
-        key = "t";
-        mode = "";
-        action = "<Plug>(eft-t)";
-      }
-      {
-        key = "T";
-        mode = "";
-        action = "<Plug>(eft-T)";
-      }
-    ];
   };
 }

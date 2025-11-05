@@ -17,15 +17,14 @@
           snacks-nvim
         ];
       };
+      keys = [
+        {
+          key = "<leader>lc";
+          mode = "n";
+          action = "<cmd>lua require('tiny-code-action').code_action()<cr>";
+          desc = "Open code actions with preview";
+        }
+      ];
     };
-
-    keymaps = [
-      {
-        key = "<leader>lc";
-        mode = "n";
-        action = "<cmd>lua require('tiny-code-action').code_action()<cr>";
-        desc = "Open code actions with preview";
-      }
-    ];
   };
 }

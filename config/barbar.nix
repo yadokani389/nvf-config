@@ -14,16 +14,19 @@
           key = "<leader>bl";
           mode = "";
           action = "<cmd>BufferNext<cR>";
+          desc = "Next Buffer";
         }
         {
           key = "<leader>bh";
           mode = "";
           action = "<cmd>BufferPrevious<CR>";
+          desc = "Previous Buffer";
         }
         {
           key = "<leader>bc";
           mode = "";
           action = "<CMD>BufferClose<CR>";
+          desc = "Close Buffer";
         }
       ];
     };

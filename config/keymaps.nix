@@ -108,6 +108,13 @@
         action = "<cmd>lua vim.diagnostic.goto_prev()<CR>";
         desc = "Lsp diagnostic goto_prev";
       }
+
+      {
+        key = "<leader>F";
+        mode = "";
+        action = "<cmd>lua require('conform').format()<CR>";
+        desc = "Format File";
+      }
     ];
   };
 }

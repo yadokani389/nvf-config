@@ -3,6 +3,7 @@
   vim = {
     lazy.plugins."barbar.nvim" = {
       package = pkgs.vimPlugins.barbar-nvim;
+      lazy = false;
       keys = [
         {
           key = "<leader>b";

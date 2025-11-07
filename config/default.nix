@@ -43,6 +43,7 @@
         mappings.openYazi = "<Leader>e";
       };
       preview.markdownPreview.enable = true;
+      motion.flash-nvim.enable = true;
     };
     binds.whichKey.enable = true;
     snippets.luasnip.enable = true;

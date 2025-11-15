@@ -121,7 +121,14 @@
           typst-preview-nvim.enable = true;
         };
       };
-      rust.enable = true;
+      rust = {
+        enable = true;
+        lsp.opts = ''
+          ['rust-analyzer'] = {
+            cargo = { allFeatures = true },
+          },
+        '';
+      };
     };
 
     terminal = {

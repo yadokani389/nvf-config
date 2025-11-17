@@ -61,6 +61,14 @@
       };
     };
     git.gitsigns.enable = true;
+    notes.todo-comments = {
+      enable = true;
+      mappings = {
+        quickFix = null;
+        telescope = null;
+        trouble = null;
+      };
+    };
 
     telescope = {
       enable = true;

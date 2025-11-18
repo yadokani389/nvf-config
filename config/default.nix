@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   imports = [
     ./barbar.nix
@@ -91,6 +91,18 @@
       enable = true;
       inlayHints.enable = true;
       lspconfig.enable = true;
+
+      lspconfig.sources.typst-lsp = lib.mkForce ''
+        lspconfig.typst_lsp.setup {
+          capabilities = capabilities,
+          on_attach = function(client, bufnr)
+            -- Disable semantic tokens as a workaround for a semantic token error when using non-english characters
+            client.server_capabilities.semanticTokensProvider = nil
+            default_on_attach(client, bufnr)
+          end,
+          cmd = ${''{"${pkgs.tinymist}/bin/tinymist"}''},
+        }
+      '';
     };
 
     debugger = {

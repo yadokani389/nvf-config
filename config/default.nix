@@ -124,6 +124,7 @@
       };
       markdown = {
         enable = true;
+        format.type = "prettierd";
         extensions = {
           render-markdown-nvim.enable = true;
         };

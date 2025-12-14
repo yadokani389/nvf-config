@@ -136,6 +136,7 @@
       sql.enable = true;
       ts.enable = true;
       python.enable = true;
+      wgsl.enable = true;
       typst = {
         enable = true;
         extensions = {

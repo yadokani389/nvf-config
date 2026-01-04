@@ -7,8 +7,8 @@
       src = pkgs.fetchFromGitHub {
         owner = "chrisgrieser";
         repo = "nvim-lsp-endhints";
-        rev = "0bd03846561f46d8b7d2284a02d3748c3d35621b";
-        hash = "sha256-MgvZqaYbJWmcjIYJM0hCfnIVc+uKE0vk3Ky6PWFYpys=";
+        rev = "782b728f7cfb530116502921fd99cbdba357285b";
+        hash = "sha256-YGDS2MZAzEzIVkp99qq3RybiVc9EsF+zwWC1v6r9zc0=";
       };
     };
     after = "require('lsp-endhints').enable()";

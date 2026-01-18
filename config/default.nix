@@ -105,6 +105,7 @@
       enableExtraDiagnostics = true;
       enableDAP = true;
 
+      astro.enable = true;
       nix = {
         enable = true;
         format.type = [ "nixfmt" ];

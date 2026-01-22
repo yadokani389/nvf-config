@@ -106,10 +106,10 @@
       enableDAP = true;
 
       astro.enable = true;
-      nix = {
-        enable = true;
-        format.type = [ "nixfmt" ];
-      };
+      bash.enable = true;
+      clang.enable = true;
+      css.enable = true;
+      html.enable = true;
       markdown = {
         enable = true;
         format.type = [ "prettierd" ];
@@ -117,20 +117,11 @@
           render-markdown-nvim.enable = true;
         };
       };
-      bash.enable = true;
-      clang.enable = true;
-      css.enable = true;
-      html.enable = true;
-      sql.enable = true;
-      ts.enable = true;
-      python.enable = true;
-      wgsl.enable = true;
-      typst = {
+      nix = {
         enable = true;
-        extensions = {
-          typst-preview-nvim.enable = true;
-        };
+        format.type = [ "nixfmt" ];
       };
+      python.enable = true;
       rust = {
         enable = true;
         lsp.opts = ''
@@ -139,6 +130,16 @@
           },
         '';
       };
+      sql.enable = true;
+      svelte.enable = true;
+      ts.enable = true;
+      typst = {
+        enable = true;
+        extensions = {
+          typst-preview-nvim.enable = true;
+        };
+      };
+      wgsl.enable = true;
     };
 
     terminal = {

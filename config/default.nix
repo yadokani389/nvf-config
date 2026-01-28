@@ -110,6 +110,7 @@
       clang.enable = true;
       css.enable = true;
       html.enable = true;
+      json.enable = true;
       markdown = {
         enable = true;
         format.type = [ "prettierd" ];

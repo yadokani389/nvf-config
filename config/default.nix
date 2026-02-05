@@ -110,7 +110,9 @@
       clang.enable = true;
       css.enable = true;
       html.enable = true;
+      java.enable = true;
       json.enable = true;
+      kotlin.enable = true;
       markdown = {
         enable = true;
         format.type = [ "prettierd" ];

@@ -109,6 +109,7 @@
       bash.enable = true;
       clang.enable = true;
       css.enable = true;
+      haskell.enable = true;
       html.enable = true;
       java.enable = true;
       json.enable = true;

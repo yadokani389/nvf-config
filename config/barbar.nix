@@ -1,6 +1,11 @@
 { pkgs, ... }:
 {
   vim = {
+    lazy.plugins."nvim-web-devicons" = {
+      lazy = false;
+      priority = 1000;
+    };
+
     lazy.plugins."barbar.nvim" = {
       package = pkgs.vimPlugins.barbar-nvim;
       lazy = false;
@@ -14,7 +19,7 @@
         {
           key = "<leader>bl";
           mode = "";
-          action = "<cmd>BufferNext<cR>";
+          action = "<cmd>BufferNext<CR>";
           desc = "Next Buffer";
         }
         {

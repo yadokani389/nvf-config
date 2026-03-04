@@ -145,6 +145,7 @@
         };
       };
       wgsl.enable = true;
+      yaml.enable = true;
     };
 
     terminal = {

@@ -17,11 +17,18 @@
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur-yadokani = {
+      url = "github:yadokani389/nur-packages";
+      inputs = {
+        flake-parts.follows = "flake-parts";
+        treefmt-nix.follows = "treefmt-nix";
+        git-hooks.follows = "git-hooks";
+      };
+    };
   };
 
   outputs =
     inputs@{
-      nixpkgs,
       nvf,
       flake-parts,
       ...
@@ -40,14 +47,21 @@
         {
           pkgs,
           config,
+          system,
           ...
         }:
         let
+          nurPkgs = inputs.nur-yadokani.packages.${system};
           config' = import ./config;
           nvim =
             (nvf.lib.neovimConfiguration {
               inherit pkgs;
               modules = [
+                {
+                  _module.args = {
+                    inherit nurPkgs;
+                  };
+                }
                 config'
               ];
             }).neovim;

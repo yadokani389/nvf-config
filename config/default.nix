@@ -11,6 +11,14 @@
   ];
 
   vim = {
+    luaConfigPost = ''
+      vim.filetype.add({
+        extension = {
+          mdx = "markdown.mdx",
+        },
+      })
+    '';
+
     enableLuaLoader = true;
     lineNumberMode = "relNumber";
     preventJunkFiles = true;

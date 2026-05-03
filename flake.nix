@@ -29,6 +29,7 @@
 
   outputs =
     inputs@{
+      nixpkgs,
       nvf,
       flake-parts,
       ...
@@ -68,6 +69,11 @@
             }).neovim;
         in
         {
+          _module.args.pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+          };
+
           packages.default = nvim;
 
           devShells.default = pkgs.mkShell {

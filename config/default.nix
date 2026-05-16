@@ -123,6 +123,7 @@
       kotlin.enable = true;
       markdown = {
         enable = true;
+        extraDiagnostics.enable = false;
         format.type = [ "prettierd" ];
         extensions = {
           render-markdown-nvim.enable = true;

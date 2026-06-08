@@ -116,6 +116,7 @@
       bash.enable = true;
       clang.enable = true;
       css.enable = true;
+      go.enable = true;
       haskell.extensions.haskell-tools.enable = true;
       html.enable = true;
       java.enable = true;

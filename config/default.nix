@@ -146,6 +146,7 @@
       sql.enable = true;
       svelte.enable = true;
       toml.enable = true;
+      tsx.enable = true;
       typescript.enable = true;
       typst = {
         enable = true;

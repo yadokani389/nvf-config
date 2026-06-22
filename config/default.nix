@@ -37,6 +37,10 @@
       transparent = true;
     };
 
+    globals = {
+      clipboard = "osc52";
+    };
+
     clipboard = {
       enable = true;
       providers.wl-copy.enable = true;

@@ -11,14 +11,6 @@
   ];
 
   vim = {
-    luaConfigPost = ''
-      vim.filetype.add({
-        extension = {
-          mdx = "markdown.mdx",
-        },
-      })
-    '';
-
     enableLuaLoader = true;
     lineNumberMode = "relNumber";
     preventJunkFiles = true;
@@ -102,6 +94,11 @@
       enable = true;
       inlayHints.enable = true;
       lspconfig.enable = true;
+      servers.rust-analyzer.init_options = ''
+        ['rust-analyzer'] = {
+          cargo = { allFeatures = true },
+        },
+      '';
     };
 
     debugger = {
@@ -129,7 +126,6 @@
       markdown = {
         enable = true;
         extraDiagnostics.enable = false;
-        format.type = [ "prettierd" ];
         extensions = {
           render-markdown-nvim.enable = true;
         };
@@ -139,14 +135,7 @@
         format.type = [ "nixfmt" ];
       };
       python.enable = true;
-      rust = {
-        enable = true;
-        lsp.opts = ''
-          ['rust-analyzer'] = {
-            cargo = { allFeatures = true },
-          },
-        '';
-      };
+      rust.enable = true;
       sql.enable = true;
       svelte.enable = true;
       toml.enable = true;
